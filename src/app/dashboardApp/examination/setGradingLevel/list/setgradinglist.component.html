@@ -1,0 +1,66 @@
+<div class="col-md-12 ">
+  <h3>Grading Levels</h3>
+<br>
+  <br>
+
+  <div class="form-group">
+    <div class="col-lg-2">
+      <label >Batch</label>
+    </div>
+
+    <div class="common_select_box">
+      <div class="input-group-btn dropdown {{dropdown1? 'open':''}}"
+           (click)="dropdown1=!dropdown1">
+        <div class="col-md-4">
+          <button type="button" class="selectpicker form-control" dropdown-toggle=""
+                  aria-haspopup="true" aria-expanded="false">{{selectedBatch.name}} </button>
+        </div>
+
+        <ul class="dropdown-menu">
+          <li (click)="onSelect(batch)" *ngFor = 'let batch of batches' >
+            {{batch.name}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div *ngIf="selectedBatch">
+
+      <div class="col-md-12 margin-bottom">
+        <button routerLink="/addsetgrading" class="btn btn-primary pull-right">Add Grades</button>
+      </div>
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Min Score(%)</th>
+              <th>Credit Points</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let setgrading of setgradings">
+              <td> <a [routerLink] = "['/viewsetgrading',setgrading.id ]">{{setgrading.name}}</a></td>
+              <td>{{setgrading.score}}</td>
+              <td>{{setgrading.description}}</td>
+              <td>{{setgrading.points}}</td>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default fa fa-edit editBtn" [routerLink]="['/editsetgrading', setgrading.id]"></button>
+                  <button type="button" class="btn btn-default fa fa-trash-o editBtn" [routerLink]="['/deletesetgrading', setgrading.id]"></button>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

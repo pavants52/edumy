@@ -1,0 +1,129 @@
+<div class="wrapper wrapper-content animated fadeIn marginclass">
+  <div class="row" >
+    <div class="col-lg-9 col-lg-offset-1">
+      <div class="col-lg-12">
+
+        <h3>Create Particulars</h3>
+
+        <form class="form-horizontal" #admission="ngForm">
+          <fieldset>
+            <div class="ibox float-e-margins">
+              <div class="ibox-content">
+
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label"> Name </label>
+                  <div class="col-md-9">
+                    <input type="text" name="name" class="form-control" [(ngModel)]="particular.name">
+                  </div>
+                </div>
+
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Description </label>
+                  <div class="col-md-9">
+                    <input type="text" name="description" class="form-control" [(ngModel)]="particular.description">
+                  </div>
+                </div>
+
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Create Using</label>
+                  <div class="col-md-9">
+                    <div class="radio">
+
+                      <label><input name="options" [(ngModel)]="options" type="radio" [value]="true" [checked]="options"/>
+                       Student Category </label>
+                      <br>
+                      <br>
+                      <label><input name="options" [(ngModel)]="options" type="radio" [value]="false" [checked]="!options"/>
+                        Admission No</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div *ngIf="options">
+                  <div class="form-group m-b-xs">
+                    <label class="col-md-3 control-label">Student Category:</label>
+                    <div class="col-md-9">
+                      <select class="selectpicker form-control" name="student" [(ngModel)]="particular.student">
+                        <option>Select</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                      </select>
+                    </div>
+                  </div>
+                  </div>
+
+                <div *ngIf="!options">
+                  <div class="form-group m-b-xs">
+                    <label class="col-md-3 control-label">Admission No </label>
+                    <div class="col-md-9">
+                      <input type="text" name="admission" class="form-control" [(ngModel)]="particular.admission">
+                    </div>
+                  </div>
+                  </div>
+
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label"> Amount </label>
+                  <div class="col-md-9">
+                    <input type="text" name="amount" class="form-control" [(ngModel)]="particular.amount">
+                  </div>
+                </div>
+
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Select Category:</label>
+                  <div class="col-md-9">
+                    <select class="selectpicker form-control" name="category" [(ngModel)]="particular.category">
+                      <option>Select</option>
+                      <option>2015</option>
+                      <option>2016</option>
+                      <option>2017</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-action">
+                  <div class="col-md-12">
+                    <button type="submit"  [disabled]="!admission.form.valid"
+                            class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save"
+                            (click)="save();  $event.stopPropagation()">
+                      <strong>Save</strong></button>
+
+                    <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                            (click)="cancel(); $event.stopPropagation()">
+                      <strong>Cancel</strong></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ibox-content">
+                <table class="table table-striped table-hover">
+                  <thead>
+                  <tr>
+                    <th>Paticular Name</th>
+                    <th>Description</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let particular of particulars">
+                    <td>{{particular.name}}</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-default fa fa-edit editBtn" (click)="update(particular.id)"></button>
+                        <button type="button" class="btn btn-default fa fa-trash-o editBtn" (click)="delete(particular.id)"></button>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,290 @@
+<div class ="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>
+            Address
+          </h5>
+          <div ibox-tools></div>
+        </div>
+        <form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value, myForm.valid)">
+        <div class="ibox-content">
+          <div class="row">
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">College Name:</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" formControlName="collegeName">
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Address Line 1:</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" formControlName="addline1">
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Address Line 2:</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" formControlName="addline2">
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">City / Town :</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" formControlName="city">
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">State  :</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" formControlName="state">
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Zip Code :</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" formControlName="zip">
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Country :</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" formControlName="country">
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Institution :</label>
+            <div class="col-md-9">
+              <select class="selectpicker form-control" formControlName="institution">
+                <option>Select Institution Type</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label"> Attendance :</label>
+            <div class="col-md-9">
+              <select class="selectpicker form-control" formControlName="attendance">
+                <option>Student Attendance Type</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Week Day :</label>
+            <div class="col-md-9">
+              <select class="selectpicker form-control" formControlName="week">
+                <option>Select Day of the week</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Date Format :</label>
+            <div class="col-md-9">
+              <select class="selectpicker form-control" formControlName="dateFormat">
+                <option>Select Date Format</option>
+                <option>DMY</option>
+                <option>MDY</option>
+                <option>YMD</option>
+                <option>YDM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Date divider: </label>
+            <div class="col-md-9">
+              <select class="selectpicker form-control" formControlName="dateSeparator">
+                <option>Select Date Separator</option>
+                <option>/</option>
+                <option>.</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label"> Start Date:</label>
+            <div class="col-md-9">
+              <input type="date" class="form-control" formControlName="financeStart">
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label"> End Date:</label>
+            <div class="col-md-9">
+              <input type="date" class="form-control" formControlName="financeEnd">
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label"> Rec Number:</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" formControlName="receipt">
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Language :</label>
+            <div class="col-md-9">
+              <select class="selectpicker form-control" formControlName="language">
+                <option>Choose Language</option>
+                <option>English</option>
+                <option>Hindi</option>
+                <option>Telugu</option>
+                <option>Kannada</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Time Zone :</label>
+            <div class="col-md-9">
+              <select class="selectpicker form-control" formControlName="timezone">
+                <option>(Please Select Timezone)</option>
+                <option>(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                <option>(GMT +5:45) Kathmandu, Pokhara</option>
+                <option>(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                <option>(GMT +6:30) Yangon, Mandalay</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Currency Type:</label>
+            <div class="col-md-9">
+              <select class="selectpicker form-control" formControlName="currency">
+                <option>(Please Select Currency Type)</option>
+                <option>USD</option>
+                <option>INR</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Prec Count:</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" formControlName="precision">
+            </div>
+          </div>
+
+           <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Select Grading:</label>
+            <div class="col-md-9">
+              <select class="selectpicker form-control" formControlName="grade">
+                <option>(Please Select Grade Type)</option>
+                <option>GPA</option>
+                <option>CGPA</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Moodle URL:</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" formControlName="moodle">
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Select Theme:</label>
+            <div class="col-md-9">
+              <select class="selectpicker form-control" formControlName="theme">
+                <option>(Please Select Theme)</option>
+                <option>Blue</option>
+                <option>Green</option>
+                <option>Red</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Select Font:</label>
+            <div class="col-md-9">
+              <select class="selectpicker form-control" formControlName="font">
+                <option>(Please Select Font)</option>
+                <option>Blue</option>
+                <option>Green</option>
+                <option>Red</option>
+              </select>
+            </div>
+          </div>
+
+        <!--  <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Admission Num :</label>
+            <div class="col-md-3">
+              <input type="checkbox" formControlName="incrementAdmission">
+            </div>
+          </div>
+          <br>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Emp Num:</label>
+            <div class="col-md-3">
+              <input type="checkbox" formControlName="incrementEmployee">
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">News Comment:</label>
+            <div class="col-md-6">
+              <input type="checkbox" formControlName="comment">
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Enable sibling :</label>
+            <div class="col-md-9">
+              <input type="checkbox" formControlName="sibling">
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Enable Password Change at First Login :</label>
+            <div class="col-md-9">
+              <input type="checkbox" formControlName="passwordChange">
+            </div>
+          </div>
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Roll No  :</label>
+            <div class="col-md-9">
+              <input type="checkbox" formControlName="rollNo">
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Upload :</label>
+            <div class="col-md-6">
+              <input type="file" #fileInput placeholder="Upload file..." formControlName="upload"/>
+            </div>
+          </div>-->
+
+          <div class="form-action">
+            <button type="submit" name="addDetails"
+              class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save" >
+              <strong>Save</strong></button>
+            <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                    (click)="cancel(); $event.stopPropagation()">
+              <strong>Cancel</strong></button>
+          </div>
+        </div>
+          </div>
+
+</form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+

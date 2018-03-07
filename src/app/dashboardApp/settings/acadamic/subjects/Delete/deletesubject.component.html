@@ -1,0 +1,49 @@
+<div class="wrapper wrapper-content animated fadeInRight delete-school">
+
+  <div class="row">
+    <div class="col-lg-9 center-block delete-school" >
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>
+            Delete Subject
+          </h5>
+        </div>
+        <div class="ibox-content" *ngIf="subject">
+          <div class="row">
+            <div class="col-lg-12">
+
+              <div class="form-group">
+                <div class="col-md-3 control-label">Subject Name</div>
+                <div class="col-md-9">
+
+                  {{subject.name}}
+
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-3 control-label">Subject Code</div>
+                <div class="col-md-9">
+
+                  {{subject.code}}
+
+                </div>
+              </div>
+
+
+              <div class="form-action">
+                <button class="cancel" type="button"   class="btn btn-md btn-white pull-right m-t-xs"
+                        (click)="cancel(); $event.stopPropagation()">Cancel</button>
+                <button class="delete"  type="button"  class="btn btn-md btn-white pull-right m-t-xs"
+                        (click)="delete(subject); $event.stopPropagation()">Delete</button>
+
+
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

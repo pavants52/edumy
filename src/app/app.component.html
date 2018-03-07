@@ -1,0 +1,31 @@
+<!-- Wrapper-->
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <sidebar *ngIf="isUserLogin"> </sidebar>
+
+    <!-- Page wraper -->
+    <!-- ng-class with current state name give you the ability to extended customization your view -->
+    
+    <div  id="{{txtId}}" class="gray-bg dashboard-1 {{landingpageclass}}">
+
+
+        <!-- Page wrapper -->                
+        <topnavbar *ngIf="isUserLogin"></topnavbar>
+
+        <div class="row  border-bottom white-bg dashboard-header dashoboard-main-view">
+            
+            <!-- Main view  -->
+            <router-outlet></router-outlet>
+
+        </div>
+
+        <!-- Footer -->
+        <footer *ngIf="isUserLogin"></footer>
+
+    </div>        
+    <!-- End page wrapper-->
+
+</div>
+<!-- End wrapper-->
+

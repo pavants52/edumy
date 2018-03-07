@@ -1,0 +1,33 @@
+<div class="col-md-12 ">
+  <h2>Class Timing Set</h2>
+  <div class="col-md-12 margin-bottom">
+    <button routerLink="/addtiming" class="btn btn-primary pull-right">Add Class Timing</button>
+  </div>
+
+
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Start Time</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let timing of timings">
+          <td> <a [routerLink] = "['/viewtiming',timing.id ]">{{timing.name}}</a></td>
+          <td>{{timing.startTime}}</td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit editBtn" [routerLink]="['/edittiming', timing.id]"></button>
+              <button type="button" class="btn btn-default fa fa-trash-o editBtn" [routerLink]="['/deletetiming', timing.id]"></button>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

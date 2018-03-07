@@ -1,0 +1,165 @@
+<!-- <h1> Side bar </h1> -->
+<!-- <ul style="margin-top:100px;">
+<li>
+    <a routerLink="/dashboard">Dashboard</a>
+</li>
+<li>
+    <a routerLink="/userMaster">User Master</a>
+</li>
+</ul> -->
+
+
+<nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul side-navigation class="nav metismenu" id="side-menu" data-metis-menu>
+      <li href-active="active">
+        <a routerLink="/dashboard"><i class="fa fa fa-th-large"></i> <span class="nav-label">DASHBOARD</span></a>
+      </li>
+      <li >
+        <a style="float:left;"><i class="fa fa-university"></i>
+          <span class="nav-label" >SCHOOLS</span><!-- <span class="fa arrow"></span> -->
+        </a>
+        <a style="display:inline-block;float:right" routerLink="/schoollist">
+          <span class="label label-info pull-right">+</span>
+        </a>
+        <!--<ul class="nav nav-second-level collapse">
+          <li><a href="schools.add">Add School</a></li>
+          <li><a href="schools.list">List School</a></li>
+        </ul>-->
+      </li>
+      <li style="clear:both;">
+        <a style="float:left;"><i class="fa fa-users"></i>
+          <span class="nav-label" >EMPLOYEES</span><!-- <span class="fa arrow"></span> -->
+        </a>
+        <a style="display:inline-block;float:right" routerLink="/employeelist">
+          <span class="label label-info pull-right">+</span>
+        </a>
+      </li>
+      <li style="clear:both;">
+        <a style="float:left;"><i class="fa fa-university"></i>
+          <span class="nav-label" >STUDENTS</span><!-- <span class="fa arrow"></span> -->
+        </a>
+        <a style="display:inline-block;float:right" routerLink="/studentlist">
+          <span class="label label-info pull-right">+</span>
+        </a>
+      </li>
+      <li style="clear:both;">
+        <a routerLink="/eventcreation"><i class="fa fa-pencil-square"></i> <span class="nav-label">Event Creation</span></a>
+      </li>
+      <li style="clear:both;">
+        <a routerLink="/datamanagement"><i class="fa fa-database"></i> <span class="nav-label">Data Management</span></a>
+      </li>
+      <li style="clear:both;">
+        <a routerLink="/discipline"><i class="fa fa-legal"></i> <span class="nav-label">Discipline</span></a>
+      </li>
+      <li style="clear:both;">
+        <a routerLink="/placement"><i class="fa fa-suitcase"></i> <span class="nav-label">Placement</span></a>
+      </li>
+      <li style="clear:both;">
+        <a routerLink="/taskmanagement"><i class="fa fa-tasks"></i> <span class="nav-label">Tasks</span></a>
+      </li>
+      <li style="clear:both;">
+        <a routerLink="/applicantregistration"><i class="fa fa-user"></i> <span class="nav-label">Application Registration</span></a>
+      </li>
+      <li style="clear:both;">
+          <a><i class="fa fa-briefcase"></i> <span class="nav-label">ATTENDANCE</span> </a>
+        </li>
+        <li ng-if="true" ng-class="{active:$state.includes('timetable')}">
+          <a ><i class="fa fa-clock-o"></i> <span class="nav-label">TIME TABLE</span><span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level collapse">
+            <li><a routerLink="/createtimetable">Create Timetable</a></li>
+            <li><a routerLink="/timinglist">Manage Class Timing Set</a></li>
+          <!--<li><a routerLink=" ">Teacher Timetable</a></li>
+            <li><a routerLink=" ">Work Allotment</a></li>
+            <li><a routerLink=" ">Institutional Timetable</a></li>
+            <li><a routerLink=" ">Timetable Tracker</a></li> -->
+            <li><a routerLink="/addbuilding">Class Room Allocation</a></li>
+            <li><a routerLink="/weekdaytimings">Weekdays Class Timings </a></li>
+          </ul>
+        </li>
+      <li >
+        <a ><i class="fa fa-folder"></i> <span class="nav-label">Inventory</span><span class="fa arrow"></span> </a>
+        <ul class="nav nav-second-level collapse">
+        <li><a routerLink="/store">Store</a></li>
+        <li><a routerLink="/item">Items</a></li>
+        <li><a routerLink="/supplier">Suppliers</a></li>
+        <li><a routerLink="/purchaseorder">Purchase Orders</a></li>
+
+      </ul>
+      </li>
+      <li >
+        <a ><i class="fa fa-book"></i> <span class="nav-label">Library</span><span class="fa arrow"></span> </a>
+        <ul class="nav nav-second-level collapse">
+          <li><a routerLink="/booklist">Book</a></li>
+          <li><a routerLink="/booksearch">Book Search</a></li>
+          <li><a routerLink="/librarysettinglist">Library Setting</a></li>
+          <li><a routerLink="/bookadditional">Book Additional Details</a></li>
+        </ul>
+      </li>
+      <li >
+        <a ><i class="fa fa-pencil-square-o"></i> <span class="nav-label">Examination</span><span class="fa arrow"></span> </a>
+        <ul class="nav nav-second-level collapse">
+          <li><a routerLink="/setgradinglist">Set Grading Level</a></li>
+          <li><a routerLink="/classdesignation">Class Designation</a></li>
+          <li><a routerLink="/icsesettings">ICSE Settings</a></li>
+          <li><a routerLink="/ccesettings">CCE Settings</a></li>
+          <li><a routerLink="/rankinglevel">Ranking Levels</a></li>
+          <li><a routerLink="/exammanagement">Exam Management</a></li>
+          <li><a routerLink="/onlineexam">Online Exam </a></li>
+
+        </ul>
+      </li>
+      <li >
+        <a ><i class="fa fa-money"></i> <span class="nav-label">FINANCE</span><span class="fa arrow"></span> </a>
+        <ul class="nav nav-second-level collapse">
+          <li><a routerLink="/financefee">Fees</a></li>
+          <li><a routerLink="/financategory">Category</a></li>
+          <li><a routerLink="/financetransaction">Transaction</a></li>
+          <li><a routerLink="/finandonation">Donations</a></li>
+          <li><a routerLink="/financepayslip">Payslip</a></li>
+          <li><a routerLink="/financereport">Finance Reports</a></li>
+          <li><a routerLink="/assetmanagement">Asset Management</a></li>
+          <li><a routerLink="/financereport">Tally report</a></li>
+        </ul>
+      </li>
+      <li>
+        <a ><i class="fa fa-bed"></i> <span class="nav-label">HOSTEL</span><span class="fa arrow"></span> </a>
+        <ul class="nav nav-second-level collapse">
+          <li><a routerLink="/hostellist">Hostels</a></li>
+          <li><a routerLink="/hostelroomcmform">Room Allocation</a></li>
+          <li><a routerLink="/hostelfeecollection">Fee Collection</a></li>
+          <li><a routerLink="/hostelfeepay">Hostel Fee Pay</a></li>
+          <li><a routerLink="/hostelfeedefauleter">Hostel Fee Defaulters</a></li>
+          <li><a routerLink="/hostelreport">Report</a></li>
+          <li><a routerLink="/hosteladditionaldetail">Hostel Additional Details</a></li>
+          <li><a routerLink="/hostelroomadditionaldetail">Room Additional Details </a></li>
+        </ul>
+      </li>
+      <li>
+        <a><i class="fa fa-bus"></i> <span class="nav-label">TRANSPORT</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse">
+          <li><a routerLink="/setroutelist">Set Routes</a></li>
+          <li><a routerLink="/vehiclelist">Vehicles</a></li>
+          <li><a routerLink="/feelist">Transport Fee </a></li>
+          <li><a routerLink="/transportreport">Report</a></li>
+          <li><a routerLink="/transportmanageroute"> Route Details</a></li>
+          <li><a routerLink="/transportmanagevehicle"> Vehicle Details </a></li>
+        </ul>
+      </li>
+      <li>
+        <a><i class="fa fa-cog"></i> <span class="nav-label">SETTINGS</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse">
+          <li><a routerLink="/generalcmform">General</a></li>
+          <li><a routerLink="/acadamicsettings">Academics</a></li>
+          <li><a routerLink="/studentsettings">Students</a></li>
+          <li><a routerLink="/employeesettings">Employees</a></li>
+          <li><a routerLink="/paymentsettings">Payment</a></li>
+        </ul>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+
+

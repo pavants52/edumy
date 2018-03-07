@@ -1,0 +1,79 @@
+<div class=" registration-page" style="position:relative;">
+  <div class="navbar-wrapper" style="margin-top: 0; position: static">
+    <nav class="navbar navbar-default " role="navigation" style="position: static; padding-bottom: 5px;">
+      <div class="container">
+        <div id="navbar" class="goal-animation navbar-collapse collapse in" aria-hidden="false">
+          <div class="navbar-header page-scroll">
+            <button aria-controls="navbar" type="button" data-target="#navbar" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a routerLink="/index"><img class="logo_img" src="assets/img/landing/school.png" alt="laptop"></a>
+          </div>
+
+        <!--  <ul class="nav navbar-nav navbar-right">
+            <li><a class="page-scroll lan_login haderStyle" routerLink="/signup">Signup</a></li>
+            <li>
+              <button type="submit" class="btn btn-primary block full-width m-b getstarted_button" routerLink="/signup">GET STARTED</button>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <form class="form-horizontal cform-1" #loginForm="ngForm">
+    <div class="get-started-form-wrapper">
+
+      <div class="group inner-addon left-addon">
+        <i class="glyphicon glyphicon-earphone"></i>
+        <input name="phoneNo" type="text" id="phoneNo" class="form-control input-material" [(ngModel)]="login.userid" #phoneNo="ngModel"
+          required/>
+        <span class="bar"></span>
+        <label class="label-material">Phone number</label>
+      </div>
+
+      <div *ngIf="phoneNo.errors && (phoneNo.dirty || phoneNo.touched)">
+        <span *ngIf="phoneNo.errors.required" class="danger">Please enter phone number.</span>
+        <span *ngIf="phoneNo.errors.pattern" class="danger">Please enter valid phone number.</span>
+      </div>
+
+      <div class="group inner-addon left-addon">
+        <i class="fa fa-building" aria-hidden="true"></i>
+        <input name="password" type="password" id="password" class="form-control input-material" [(ngModel)]="login.password" #password="ngModel"
+          required/>
+        <span class="bar"></span>
+        <label class="label-material">Password</label>
+      </div>
+
+      <div *ngIf="password.errors && (password.dirty || password.touched)">
+        <span *ngIf="password.errors.required" class="danger">Please enter password.</span>
+        <span *ngIf="password.errors.pattern" class="danger">Please enter valid password.</span>
+      </div>
+
+  <!--    <div class="group inner-addon left-addon">
+        <i class="glyphicon glyphicon-globe"></i>
+        <input name="domainName" id="domainName" type="text" class="form-control input-material input-material-domain" [(ngModel)]="subDomainName"
+          #domainName="ngModel" required/>
+        <span>.dev.edumy.in</span>
+        <span class="bar bar-domain"></span>
+        <label class="label-material">Institute Name</label>
+      </div>
+-->
+      <div *ngIf="domainName.errors && (domainName.dirty || domainName.touched)">
+        <span *ngIf="domainName.errors.required" class="danger">Please enter institute name.</span>
+        <span *ngIf="domainName.errors.pattern" class="danger">Please enter valid institute name.</span>
+      </div>
+
+      <div>
+        <button type="submit" class="btn block button-get-started" (click)="userLogin(login)"> LOGIN </button>
+        <div class="privacy-policy">By signing up you agree to our T & C and privacy policy</div>
+      </div>
+
+    </div>
+  </form>
+
+</div>

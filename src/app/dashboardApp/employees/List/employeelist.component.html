@@ -1,0 +1,35 @@
+<div class="col-md-12 ">
+  <h2>Employee list</h2>
+  <div class="col-md-12 margin-bottom">
+    <button routerLink="/addemployee" class="btn btn-primary pull-right">Add Employee</button>
+  </div>
+
+
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Employee Number</th>
+          <th>Country</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let employee of employees">
+          <td> <a [routerLink] = "['/viewemployee',employee.id ]">{{employee.firstName}}</a></td>
+          <td>{{employee.empNumber}}</td>
+          <td>{{employee.country}}</td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit editBtn" [routerLink]="['/editemployee', employee.id]"></button>
+              <button type="button" class="btn btn-default fa fa-trash-o editBtn" [routerLink]="['/deleteemployee', employee.id]"></button>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

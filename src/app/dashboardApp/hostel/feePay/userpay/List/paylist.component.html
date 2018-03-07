@@ -1,0 +1,83 @@
+<div class="wrapper wrapper-content page-menu">
+  <div class="row">
+
+  <h4>Fee Status & Payment History </h4>
+    <div class="ibox-title"></div>
+    <div class="col-md-10 col-md-offset-1">
+
+            <div class="col-lg-12">
+              <div class="form-group">
+                <div class="col-lg-4">
+                  <label>Select Fee Collection</label>
+                </div>
+
+                <div class="common_select_box">
+                  <div class="input-group-btn dropdown {{dropdown1? 'open':''}}"
+                       (click)="dropdown1=!dropdown1">
+                    <div class="col-md-7">
+                      <button type="button" class="selectpicker form-control" dropdown-toggle=""
+                              aria-haspopup="true" aria-expanded="false">{{selectedFee.name}}
+                      </button>
+                    </div>
+
+                    <ul class="dropdown-menu">
+                      <li (click)="onSelect(fee)" *ngFor='let fee of fees'>
+                        {{fee.name}}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div *ngIf="selectedFee">
+                  <div class="col-lg-12">
+                    <table class="table">
+                      <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr *ngFor="let batchpay of batchpays">
+                        <td> {{selectedFee.name}}</td>
+                        <td>{{selectedFee.amount}}</td>
+                        <td> Paid </td>
+
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <table class="table">
+                      <thead>
+                      <tr>
+                        <th>Receipt No:</th>
+                        <th>Payment Mode</th>
+                        <th>Payment Notes</th>
+                        <th>Amount</th>
+
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr *ngFor="let batchpay of batchpays">
+                        <td> {{batchpay.id}}</td>
+                        <td>{{batchpay.selectPayment}}</td>
+                        <td>{{batchpay.notes}}</td>
+                        <td>{{selectedFee.amount}}</td>
+
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+

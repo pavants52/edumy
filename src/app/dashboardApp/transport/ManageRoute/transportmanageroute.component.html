@@ -1,0 +1,99 @@
+<div class="wrapper wrapper-content animated fadeIn marginclass">
+  <div class="row" >
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="col-lg-12">
+
+        <h3> Route Details</h3>
+
+        <form class="form-horizontal" #admission="ngForm">
+          <fieldset>
+            <div class="ibox float-e-margins">
+              <div class="ibox-content">
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label"> Name </label>
+                  <div class="col-md-9">
+                    <input type="text" name="name" class="form-control" [(ngModel)]="manageroute.name">
+                  </div>
+                </div>
+
+                 <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Status</label>
+                  <div class="col-md-9">
+                    <div class="radio">
+                      <label><input type="radio" name="status"
+                                    [(ngModel)]="manageroute.status" [value]="Active"
+                                    [checked]="manageroute.status==Active"
+                                    required>Active</label>
+                      <br>
+                      <br>
+                      <label><input type="radio" name="status"
+                                    [(ngModel)]="manageroute.status" [value]="Inactive"
+                                    [checked]="manageroute.status==Inactive"
+                                    required>Inactive</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label"> Is Mandetory </label>
+                  <div class="col-md-9">
+                    <input type="checkbox" name="check"  [(ngModel)]="manageroute.check">
+                  </div>
+                </div>
+
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Input Method</label>
+                  <div class="col-md-9">
+                    <select class="selectpicker form-control" name="category" [(ngModel)]="manageroute.category">
+                      <option>Text Box</option>
+                      <option>Select Box</option>
+                      <option>Check Box</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-action">
+                  <div class="col-md-12">
+                    <button type="submit"  [disabled]="!admission.form.valid"
+                            class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save"
+                            (click)="save();  $event.stopPropagation()">
+                      <strong>Save</strong></button>
+
+                    <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                            (click)="cancel(); $event.stopPropagation()">
+                      <strong>Cancel</strong></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ibox-content">
+                <table class="table table-striped table-hover">
+                  <thead>
+                  <tr>
+                    <th> Name </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let manageroute of manageroutes">
+                    <td>{{manageroute.name}}</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-default fa fa-edit editBtn" (click)="update(manageroute.id)"></button>
+                        <button type="button" class="btn btn-default fa fa-trash-o editBtn" (click)="delete(manageroute.id)"></button>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

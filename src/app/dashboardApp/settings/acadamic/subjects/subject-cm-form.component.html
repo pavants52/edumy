@@ -1,0 +1,69 @@
+<div [formGroup]="formGroup">
+  <div class="row" >
+    <div class="col-lg-14 col-lg-offset-1">
+      <div class="col-lg-14">
+            <div class="ibox float-e-margins">
+                <h5>
+                  Add Subject
+                </h5>
+                <div ibox-tools></div>
+
+              <div class="ibox-content">
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label"> Name:</label>
+                  <div class="col-md-9">
+                    <input type="text" class="form-control" formControlName="name">
+                  </div>
+                </div>
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Code:</label>
+                  <div class="col-md-9">
+                    <input type="text"  class="form-control" formControlName ="code">
+                  </div>
+                </div>
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Max Classes:</label>
+                  <div class="col-md-9">
+                    <input type="text" class="form-control" formControlName="classes">
+                  </div>
+                </div>
+
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Select Batch:</label>
+                  <div class="col-md-9">
+                    <select class="selectpicker form-control" formControlName="selectBatch">
+                      <option>Select</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">No Exam:</label>
+                  <div class="col-md-9">
+                    <input type="checkbox" formControlName="exam">
+                  </div>
+                </div>
+
+                <div class="form-action">
+                  <div class="col-md-12">
+                    <button type="submit" name="addDetails"
+                            class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save">
+                      <strong>Save</strong></button>
+
+                    <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                            (click)="cancel(); $event.stopPropagation()">
+                      <strong>Cancel</strong></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+

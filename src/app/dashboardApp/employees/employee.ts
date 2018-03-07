@@ -1,0 +1,34 @@
+export class Employee {
+  id:number;
+  empNumber:string;
+  firstName:string;
+  middleName:string;
+  lastName:string;
+  joinDate:string;
+  status:string;
+  email:string;
+  dob:string;
+  department:string;
+  category:string;
+  grade:string;
+  jobTitle:string;
+  qualification:string;
+  experience:string;
+  totalExperience:string;
+  maritalStatus:string;
+  fatherName:string;
+  motherName:string;
+  blood:string;
+  country:string;
+  addLine1:string;
+  addLine2:string;
+  city:string;
+  state:string;
+  country1:string;
+  pincode:string;
+  offPhone1:string;
+  offPhone2:string;
+  mobilePhone:string;
+  homePhone:string;
+  fax:string;
+}

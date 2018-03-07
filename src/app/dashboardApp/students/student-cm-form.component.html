@@ -1,0 +1,500 @@
+<div class="wrapper wrapper-content animated fadeIn marginclass">
+  <div class="row" >
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="col-lg-12">
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#admission">Student Admission</a></li>
+          <li><a data-toggle="tab" href="#personal">Personal Details</a></li>
+          <li><a data-toggle="tab" href="#contacts">Contact Details</a></li>
+          <li><a data-toggle="tab" href="#class">Class & Batch</a></li>
+          <li><a data-toggle="tab" href="#photo">Upload Photo</a></li>
+          <li><a data-toggle="tab" href="#settings">Settings</a></li>
+          <li><a data-toggle="tab" href="#gaurdian">Parent & Gaurdian </a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="admission" class="tab-pane fade in active">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content">
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Admission Number:</label>
+                      <div class="col-md-9">
+                        <input type="text" name="admissionNumber" class="form-control" [(ngModel)]="student.admissionNumber">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Admission Date:</label>
+                      <div class="col-md-9">
+                        <input type="date" class="form-control" name="admissionDate" [(ngModel)]="student.admissionDate">
+                      </div>
+                    </div>
+
+                    <div class="form-action">
+                      <div class="col-md-12">
+                        <button type="submit"  [disabled]="!admission.form.valid"
+                                class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save"
+                                (click)="saveStudent();  $event.stopPropagation()">
+                          <strong>Save</strong></button>
+
+                        <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                                (click)="cancel(); $event.stopPropagation()">
+                          <strong>Cancel</strong></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div id="personal" class="tab-pane ">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content">
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">First Name:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="firstName" [(ngModel)]="student.firstName">
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Middle Name:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="middleName" [(ngModel)]="student.middleName">
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Last Name:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="lastName" [(ngModel)]="student.lastName">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Date Of Birth:</label>
+                      <div class="col-md-9">
+                        <input type="date" class="form-control" name="dob" [(ngModel)]="student.dob">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Blood Group:</label>
+                      <div class="col-md-9">
+                        <select class="selectpicker form-control" name="blood" [(ngModel)]="student.blood">
+                          <option>Select</option>
+                          <option>o+</option>
+                          <option>A+</option>
+                          <option>AB+</option>
+                          <option>B-</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Birth Place:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="birthPlace" [(ngModel)]="student.birthPlace">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Nationality:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="nationality" [(ngModel)]="student.nationality">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Mobile:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="mobile" [(ngModel)]="student.mobile">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Mother Tongue:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="motherTongue" [(ngModel)]="student.motherTongue">
+                      </div>
+                    </div>
+
+                    <div class="form-action">
+                      <div class="col-md-12">
+                        <button type="submit"  [disabled]="!admission.form.valid"
+                                class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save"
+                                (click)="saveStudent();  $event.stopPropagation()">
+                          <strong>Save</strong></button>
+                        <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                                (click)="cancel(); $event.stopPropagation()">
+                          <strong>Cancel</strong></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div id="contacts" class="tab-pane ">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+
+                  <div class="ibox-content">
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Address Line1:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="addLine1" [(ngModel)]="student.addLine1" >
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Address Line2:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control"  name="addLine2" [(ngModel)]="student.addLine2">
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">City:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control"  name="city" [(ngModel)]="student.city">
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">State:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control"  name="state" [(ngModel)]="student.state">
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Country:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control"  name="country1" [(ngModel)]="student.country">
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Pincode:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control"  name="pincode" [(ngModel)]="student.pincode">
+                      </div>
+                    </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label"> Phone:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" name="Phone" [(ngModel)]="student.Phone" >
+                        </div>
+                      </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Mobile:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control"  name="mobile" [(ngModel)]="student.mobile1">
+                        </div>
+                      </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Email:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control"  name="email" [(ngModel)]="student.email">
+                        </div>
+                      </div>
+
+                      <div class="form-action">
+                        <div class="col-md-12">
+                          <button type="submit"  [disabled]="!admission.form.valid"
+                                  class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save"
+                                  (click)="saveStudent();  $event.stopPropagation()">
+                            <strong>Save</strong></button>
+                          <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                                  (click)="cancel(); $event.stopPropagation()">
+                            <strong>Cancel</strong></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div id="class" class="tab-pane ">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content">
+                  <div class="form-group m-b-xs">
+                    <label class="col-md-3 control-label">Class:</label>
+                    <div class="col-md-9">
+                      <select class="selectpicker form-control" name="classSelect" [(ngModel)]="student.classSelect">
+                        <option>Select a Class</option>
+                        <option>X</option>
+                        <option>X|</option>
+                        <option>X||</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group m-b-xs">
+                    <label class="col-md-3 control-label">Batch:</label>
+                    <div class="col-md-9">
+                      <select class="selectpicker form-control" name="batch" [(ngModel)]="student.batch">
+                        <option>Select a Batch</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                      </select>
+                    </div>
+                  </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Roll No:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control"  name="rollNo" [(ngModel)]="student.rollNo">
+                      </div>
+                    </div>
+
+                    <div class="form-action">
+                      <div class="col-md-12">
+                        <button type="submit"  [disabled]="!admission.form.valid"
+                                class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save"
+                                (click)="saveStudent();  $event.stopPropagation()">
+                          <strong>Save</strong></button>
+                        <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                                (click)="cancel(); $event.stopPropagation()">
+                          <strong>Cancel</strong></button>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </fieldset>
+            </form>
+          </div>
+
+          <div id="photo" class="tab-pane ">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content">
+                    <div class="form-group">
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Upload User's photo:</label>
+                        <div class="col-md-9">
+                          <input type="file" name="upload" #fileInput placeholder="Upload file..." [(ngModel)]="student.upload"/>
+                        </div>
+                      </div>
+
+                    <div class="form-action">
+                      <div class="col-md-12">
+                        <button type="submit"  [disabled]="!admission.form.valid"
+                                class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save"
+                                (click)="saveStudent();  $event.stopPropagation()">
+                          <strong>Save</strong></button>
+                        <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                                (click)="cancel(); $event.stopPropagation()">
+                          <strong>Cancel</strong></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div id="settings" class="tab-pane ">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content">
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Biometric ID:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control"  name="biometric" [(ngModel)]="student.biometric">
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Enable SMS Features:</label>
+                      <div class="col-md-9">
+                        <input type="checkbox" value="true"  name="sms" [(ngModel)]="student.sms">
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Enable Email Features:</label>
+                      <div class="col-md-9">
+                        <input type="checkbox" value="true"  name="emailFeature" [(ngModel)]="student.emailFeature">
+                      </div>
+                    </div>
+                    <div class="form-action">
+                      <div class="col-md-12">
+                        <button type="submit"  [disabled]="!admission.form.valid"
+                                class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save"
+                                (click)="saveStudent();  $event.stopPropagation()">
+                          <strong>Save</strong></button>
+                        <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                                (click)="cancel(); $event.stopPropagation()">
+                          <strong>Cancel</strong></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div id="gaurdian" class="tab-pane ">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+                  <div class="ibox-title ">
+                    <h5>
+                      Personal Details
+                    </h5>
+                    <div ibox-tools></div>
+                  </div>
+                  <div class="ibox-content">
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">First Name:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="parentFirstName" [(ngModel)]="student.parentFirstName">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Last Name:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="parentLastName" [(ngModel)]="student.parentLastName">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Relation:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="relation" [(ngModel)]="student.relation">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Date Of Birth:</label>
+                      <div class="col-md-9">
+                        <input type="date" class="form-control" name="parentdob" [(ngModel)]="student.parentdob">
+                      </div>
+                    </div>
+
+                      <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Education:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="education" [(ngModel)]="student.education">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Nationality:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="occupation" [(ngModel)]="student.occupation">
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Income:</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" name="income" [(ngModel)]="student.income">
+                      </div>
+                    </div>
+
+                    <div class="ibox-title ">
+                      <h5>
+                        Contact Details
+                      </h5>
+                      <div ibox-tools></div>
+                    </div>
+                    <div class="ibox-content">
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Email:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" name="parentEmail" [(ngModel)]="student.parentEmail">
+                        </div>
+                      </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Address Line1:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" name="parentAddLine1" [(ngModel)]="student.parentAddLine1">
+                        </div>
+                      </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Address Line2:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" name="parentAddLine2" [(ngModel)]="student.parentAddLine2">
+                        </div>
+                      </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">City:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control"  name="parentCity" [(ngModel)]="student.parentCity">
+                        </div>
+                      </div>
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">State:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control"  name="parentState" [(ngModel)]="student.parentState">
+                        </div>
+                      </div>
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Country:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control"  name="parentCountry" [(ngModel)]="student.parentCountry">
+                        </div>
+                      </div>
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Pincode:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control"  name="parentPincode" [(ngModel)]="student.parentPincode">
+                        </div>
+                      </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label"> Phone 1:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" name="parentPhone1" [(ngModel)]="student.parentPhone1" >
+                        </div>
+                      </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label"> Phone 2:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" name="parentPhone2" [(ngModel)]="student.parentPhone2" >
+                        </div>
+                      </div>
+
+
+                      <div class="form-action">
+                      <div class="col-md-12">
+                        <button type="submit"  [disabled]="!admission.form.valid"
+                                class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save"
+                                (click)="saveStudent();  $event.stopPropagation()">
+                          <strong>Save</strong></button>
+                        <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                                (click)="cancel(); $event.stopPropagation()">
+                          <strong>Cancel</strong></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  </div>
+              </fieldset>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

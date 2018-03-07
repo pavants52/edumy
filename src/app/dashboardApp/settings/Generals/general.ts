@@ -1,0 +1,33 @@
+export class General {
+  id:number;
+  collegeName:string;
+  addline1:string;
+  addline2:string;
+  city:string;
+  state:string;
+  zip:string;
+  country:string;
+  institution:string;
+  attendance:string;
+  week:string;
+  dateFormat:string;
+  dateSeparator:string;
+  financeStart:string;
+  financeEnd:string;
+  receipt:string;
+  language:string;
+  timezone:string;
+  currency:string;
+  precision:string;
+  upload:string;
+  grade:string;
+  moodle:string;
+  theme:string;
+  font:string;
+  incrementAdmission:string;
+  incrementEmployee:string;
+  comment:string;
+  sibling:string;
+  passwordChange:string;
+  rollNo:string;
+}

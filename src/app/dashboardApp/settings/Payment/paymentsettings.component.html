@@ -1,0 +1,158 @@
+<div class="wrapper wrapper-content page-menu">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <div class="ibox-title ">
+        <h5>
+          Paypal Payments
+        </h5>
+        <div ibox-tools></div>
+      </div>
+      <form class="form-horizontal" #admission="ngForm">
+        <fieldset>
+          <div class="ibox-content" style="font-size: 14px;">
+            <div class="row">
+              <div class="col-lg-12">
+                <p>Accept credit card payments during checkout by choosing a payment gateway.</p>
+                <p style="line-height: 2;">After your first sale, Paypal will email you at
+                  <B> {{ email }} </B>
+                  with instructions for setting up a Paypal
+                  merchant account and claiming your funds.</p>
+                <hr>
+
+                <div class="form-group">
+                  <label class="col-lg-4 control-label">Using</label>
+                  <div class="col-lg-8">
+                    <input class="form-control" type="text" value="Paypal Express Checkout" disabled>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-lg-4 control-label">Email</label>
+
+                  <div class="col-lg-8">
+                    <div class="information">
+                      <input *ngIf="editMode" [ngModel]="email">
+                      <button (click)="editMode=true">Edit</button>
+                      <button (click)="editMode=false">Save</button>
+                    </div>
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                  <div class="col-lg-4">
+                    <div class="input-group" style="font-size: 16px; margin-left: -10px;">
+                                    <span class="input-group-addon"
+                                          style="font-size: 16px; background-color: #F3F3F4; padding: 0 10px; border-color: #F3F3F4">
+                                        <i class="fa fa-credit-card fa-2x" aria-hidden="true"></i>
+                                    </span>
+                      <label style="margin-bottom: 0; margin-top: 5px;">Accept Credit Cards</label>
+                    </div>
+                  </div>
+                  <div class="common_select_box">
+                    <div class="input-group-btn dropdown {{dropdown1? 'open':''}}"
+                         (click)="dropdown1=!dropdown1">
+                      <div class="col-md-5">
+                      <button type="button" class="selectpicker form-control" dropdown-toggle=""
+                              aria-haspopup="true" aria-expanded="false">{{selectedGateway.name}} </button>
+                     </div>
+
+                  <ul class="dropdown-menu">
+                  <li (click)="onSelect(gateway)" *ngFor = 'let gateway of gateways' >
+                    {{gateway.name}}
+                  </li>
+                    </ul>
+                      </div>
+                    </div>
+                  <div *ngIf="selectedGateway">
+                    <div class="wrapper wrapper-content animated fadeInRight">
+
+                        <div class="col-lg-10 col-lg-offset-3">
+                          <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                              <div class="col-lg-3">
+                                <h5>{{ selectedGateway.name }}</h5>
+                              </div>
+                              <div class="col-lg-9">
+                                <p>Accept credit card payments during checkout by choosing a payment gateway.This can be
+                                  used in conjuction with other
+                                  payment solutions such as PayPal Express Checkout.</p>
+                              </div>
+
+                            </div>
+                            <div class="ibox-content">
+                              <div class="row">
+                                <div class="col-sm-6 b-r">
+                                  <i class="fa fa-credit-card fa-1x" aria-hidden="true"></i>
+                                  <label class="control-label">Credit Card Rate</label>
+                                  <p>Set by {{selectedGateway.name}}</p>
+                                  <hr>
+                                  <i class="fa fa-calculator fa-1x" aria-hidden="true"></i>
+                                  <label class="control-label">Transaction Fee</label>
+
+                                </div>
+                                <div class="col-sm-6">
+                                  <h3 class="m-t-none m-b">Please provide your {{selectedGateway.name}} credentials:</h3>
+
+                                  <form role="form">
+                                    <div class="form-group"><label>Merchant ID</label> <input type="email"
+                                                                                              placeholder="Enter email"
+                                                                                              class="form-control">
+                                    </div>
+                                    <div class="form-group"><label>Secret Key</label> <input type="password"
+                                                                                             placeholder="Password"
+                                                                                             class="form-control">
+                                    </div>
+                                    <!--<label> <input icheck type="checkbox" style="margin-right: 3px"-->
+                                    <!--ng-model="main.unCheck">Show </label>-->
+
+                                    <div class="border-bottom">
+                                      <label class="control-label" style="font-size: 16px">Cards Accepted</label>
+                                    </div>
+                                    <br>
+                                    <div style="float: left;width: 400px; height: 60px;">
+                                      <ul class="list-unstyled">
+                                        <li style="display: inline;padding: 0 10px">
+                                          <input type="checkbox">
+                                          <i class="fa fa-cc-visa" style="font-size:20px;color:darkblue;"></i>
+                                        </li>
+                                        <li style="display: inline; padding: 0 10px">
+                                          <input type="checkbox">
+                                          <i class="fa fa-cc-mastercard " style="font-size:20px;"></i>
+                                        </li>
+                                        <li style="display: inline; padding: 0 10px">
+                                          <input type="checkbox">
+                                          <i class="fa fa-cc-visa " style="font-size:20px;"></i>
+                                        </li>
+                                        <li style="display: inline; padding: 0 10px">
+                                          <input type="checkbox">
+                                          <i class="fa fa-cc-visa " style="font-size:20px;"></i>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div>
+                                      <button class="btn btn-sm btn-primary pull-right m-t-n-xs"
+                                              type="submit"><strong>Activate</strong></button>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div ui-view></div>
+

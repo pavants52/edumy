@@ -1,0 +1,33 @@
+<div class="col-md-12 ">
+  <h2>Book list</h2>
+  <div class="col-md-12 margin-bottom">
+    <button routerLink="/addbook" class="btn btn-primary pull-right">Add Book</button>
+  </div>
+
+
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Book Mode</th>
+          <th>Book Number</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let book of books">
+          <td> <a [routerLink] = "['/viewbook',book.id ]">{{book.mode}}</a></td>
+          <td>{{book.bookNumber}}</td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit editBtn" [routerLink]="['/editbook', book.id]"></button>
+              <button type="button" class="btn btn-default fa fa-trash-o editBtn" [routerLink]="['/deletebook', book.id]"></button>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

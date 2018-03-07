@@ -1,0 +1,46 @@
+<div class="wrapper wrapper-content page-menu" >
+  <div class="row">
+    <div class="col-lg-12 ">
+      <div class="ibox-title ">
+        <h5>
+          Finance Report
+        </h5>
+        <div ibox-tools></div>
+      </div>
+      <div class="ibox-content">
+        <div class="col-lg-12">
+          <div class="row">
+            <table class="table table-bordered" export-csv="csv"
+                   separator=";" export-csv-ignore="ignore">
+              <tr>
+                <th>No</th>
+                <th>Particulars</th>
+                <th>Expenses</th>
+                <th>Incomes</th>
+              </tr>
+              <tr *ngFor="let doc of report ">
+                <td>{{doc.id}}</td>
+                <td>{{doc.particulars}}</td>
+                <td>{{doc.expenses}}</td>
+                <td>{{doc.incomes}}</td>
+              </tr>
+            </table>
+          </div>
+
+
+        </div>
+        <div class="form-action">
+          <div class="col-md-6">
+            <a class="btn btn-md btn-primary pull-right m-t-xs m-l" (click)="generate()">
+              <i class="glyphicon glyphicon-new-window  "></i> <strong>Export as CSV</strong>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+

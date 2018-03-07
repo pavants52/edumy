@@ -1,0 +1,112 @@
+<div class="wrapper wrapper-content animated fadeIn marginclass">
+  <div class="row" >
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="col-lg-12">
+
+       <h3>Discipline</h3>
+
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content">
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Complaint No </label>
+                      <div class="col-md-9">
+                        <input type="text" name="number" class="form-control" [(ngModel)]="disc.number">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Title</label>
+                      <div class="col-md-9">
+                        <input type="text" name="title" class="form-control" [(ngModel)]="disc.title">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Trail Date </label>
+                      <div class="col-md-9">
+                        <input type="date" name="date" class="form-control" [(ngModel)]="disc.date">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Description </label>
+                      <div class="col-md-9">
+                        <input type="text" name="description" class="form-control" [(ngModel)]="disc.description">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Complaint By </label>
+                      <div class="col-md-9">
+                        <input type="text" name="complainBy" class="form-control"  [(ngModel)]="disc.complainBy">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Complaint Against </label>
+                      <div class="col-md-9">
+                        <input type="text" name="against" class="form-control"  [(ngModel)]="disc.against">
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Responsible Staff </label>
+                      <div class="col-md-9">
+                        <input type="text" name="responsible" class="form-control"  [(ngModel)]="disc.responsible">
+                      </div>
+                    </div>
+
+                    <div class="form-action">
+                      <div class="col-md-12">
+                        <button type="submit"  [disabled]="!admission.form.valid"
+                                class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save"
+                                (click)="save();  $event.stopPropagation()">
+                          <strong>Save</strong></button>
+
+                        <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                                (click)="cancel(); $event.stopPropagation()">
+                          <strong>Cancel</strong></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ibox-content">
+                    <table class="table table-striped table-hover">
+                      <thead>
+                      <tr>
+                        <th>Complaints List</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <th>Title</th>
+                        <th>Trail Date</th>
+                        <th>Actions</th>
+                      </tr>
+                      <tr *ngFor="let disc of discs">
+                        <td>{{disc.title}}</td>
+                        <td>{{disc.date}}</td>
+                        <td>
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-default fa fa-edit editBtn" (click)="update(disc.id)"></button>
+                            <button type="button" class="btn btn-default fa fa-trash-o editBtn" (click)="delete(disc.id)"></button>
+                          </div>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+

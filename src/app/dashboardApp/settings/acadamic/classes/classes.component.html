@@ -1,0 +1,45 @@
+          <div id="class" class="tab-pane ">
+
+                <div class="ibox float-e-margins">
+                  <div class="ibox-title ">
+                    <h5>
+                      Class Details
+                    </h5>
+                    <div ibox-tools></div>
+                  </div>
+                  <div class="ibox-content">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="form-group">
+                          <button type="submit"
+                                  name="addDetails"
+                                  class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save"
+                                  [routerLink]="['/acadamicsettings/addclass']">New Class
+                          </button>
+
+                          <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                              <th>Class</th>
+                              <th>Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let classmodel of classmodels">
+                              <td>{{classmodel.name}}</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default fa fa-edit editBtn" [routerLink]="['/acadamicsettings/editclass', classmodel.id]"></button>
+                                  <button type="button" class="btn btn-default fa fa-trash-o editBtn" [routerLink]="['/acadamicsettings/deleteclass', classmodel.id]" ></button>
+                                </div>
+                              </td>
+                            </tr>
+                            </tbody>
+                          </table>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>

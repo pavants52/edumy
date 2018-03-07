@@ -1,0 +1,53 @@
+<div class="wrapper wrapper-content animated fadeIn marginclass">
+  <div class="row" >
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="col-lg-12">
+        <h3>View Library Cards</h3>
+
+        <form class="form-horizontal" #admission="ngForm">
+          <fieldset>
+            <div class="ibox float-e-margins">
+              <div class="ibox-content">
+
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Class:</label>
+                  <div class="col-md-9">
+                  {{librarysetting.libclass}}
+                  </div>
+                </div>
+
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Category:</label>
+                  <div class="col-md-9">
+                    {{librarysetting.category}}
+
+                  </div>
+                </div>
+
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Books Issuable:</label>
+                  <div class="col-md-9">
+                    {{librarysetting.issue}}
+                  </div>
+                </div>
+
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Time Period:</label>
+                  <div class="col-md-9">
+                    {{librarysetting.time}}
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+

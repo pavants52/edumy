@@ -1,0 +1,68 @@
+<div class="wrapper wrapper-content page-menu">
+  <div class="row">
+    <h4>Internal Assessment Calculation Mode</h4>
+    <br>
+    <br>
+    <div class="col-md-10 col-md-offset-1">
+
+      <div class="panel panel-default panel-table">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="form-group m-b-xs">
+
+                <div class="col-md-9">
+                  <div class="radio">
+                    <label><input type="radio" name="status"
+                                  [(ngModel)]="additional.status" [value]="1"
+                                  [checked]="additional.status==1"
+                                  required>Common Denominator Mode</label>
+                    <br>
+                    <br>
+                    <p>
+                      The common denominator mode converts all IA indicator marks to a common denominator
+                      (1) before applying the formula. It is useful when the maximum marks are different
+                      for each indicator. Click on View Example for an indicative example
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default panel-table">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="form-group m-b-xs">
+
+                <div class="col-md-9">
+                  <div class="radio">
+                    <label><input type="radio" name="status"
+                                  [(ngModel)]="additional.status" [value]="1"
+                                  [checked]="additional.status==1"
+                                  required>Total Marks Mode</label>
+                    <br>
+                    <br>
+                    <p>
+                      The total marks mode uses actual values of each IA indicator when applying the
+                      formula and calculates the result out of the maximum marks of the indicators.
+                      Click on View Example for an indicative example.
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+    </div>
+  </div>

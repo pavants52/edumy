@@ -1,0 +1,47 @@
+<div class="wrapper wrapper-content animated fadeInRight delete-employee">
+
+  <div class="row">
+    <div class="col-lg-6 center-block delete-employee" >
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>
+            Delete Class Timings Sets
+          </h5>
+        </div>
+        <div class="ibox-content" *ngIf="timing">
+          <div class="row">
+            <div class="col-lg-12">
+
+              <div class="form-group">
+                <div class="col-md-3 control-label">name</div>
+                <div class="col-md-9">
+
+                  {{timing.name}}
+
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-md-3 control-label">Start Time</div>
+                <div class="col-md-9">
+
+                  {{timing.startTime}}
+
+                </div>
+              </div>
+
+
+
+              <div class="form-action">
+                <button class="cancel" type="button"   class="btn btn-md btn-white pull-right m-t-xs"
+                        (click)="cancel(); $event.stopPropagation()">Cancel</button>
+                <button class="delete"  type="button"  class="btn btn-md btn-white pull-right m-t-xs"
+                        (click)="delete(timing); $event.stopPropagation()">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

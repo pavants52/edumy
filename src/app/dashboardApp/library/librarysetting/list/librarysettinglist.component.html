@@ -1,0 +1,62 @@
+<div class="col-md-12 ">
+  <h3>Library Cards List</h3>
+<br>
+  <br>
+
+  <div class="form-group">
+    <div class="col-lg-2">
+      <label >Classes</label>
+    </div>
+
+    <div class="common_select_box">
+      <div class="input-group-btn dropdown {{dropdown1? 'open':''}}"
+           (click)="dropdown1=!dropdown1">
+        <div class="col-md-4">
+          <button type="button" class="selectpicker form-control" dropdown-toggle=""
+                  aria-haspopup="true" aria-expanded="false">{{selectedBatch.name}} </button>
+        </div>
+
+        <ul class="dropdown-menu">
+          <li (click)="onSelect(batch)" *ngFor = 'let batch of batches' >
+            {{batch.name}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div *ngIf="selectedBatch">
+
+      <div class="col-md-12 margin-bottom">
+        <button routerLink="/addlibrarysetting" class="btn btn-primary pull-right">Add Library Card</button>
+      </div>
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th>Class</th>
+              <th>Category</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let librarysetting of librarysettings">
+              <td> <a [routerLink] = "['/viewlibrarysetting',librarysetting.id ]">{{librarysetting.libclass}}</a></td>
+              <td>{{librarysetting.category}}</td>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default fa fa-edit editBtn" [routerLink]="['/editlibrarysetting', librarysetting.id]"></button>
+                  <button type="button" class="btn btn-default fa fa-trash-o editBtn" [routerLink]="['/deletelibrarysetting', librarysetting.id]"></button>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

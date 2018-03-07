@@ -1,0 +1,35 @@
+<div class="col-md-12 ">
+  <h2>Hostel Details</h2>
+  <div class="col-md-12 margin-bottom">
+    <button routerLink="/addhostel" class="btn btn-primary pull-right">Add Hostels</button>
+  </div>
+
+
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Hostel Name</th>
+          <th>Hostel Information</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let hostel of hostels">
+          <td><a [routerLink] = "['/viewhostel',{id: hostel.id} ]">{{hostel.name}}</a></td>
+          <td>{{hostel.information}}</td>
+
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit editBtn" [routerLink]="['/edithostel',{id: hostel.id}]" ></button>
+              <button type="button" class="btn btn-default fa fa-trash-o editBtn" [routerLink]="['/deletehostel', {id: hostel.id}]"></button>
+
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

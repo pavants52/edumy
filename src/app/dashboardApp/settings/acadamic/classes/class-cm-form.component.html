@@ -1,0 +1,92 @@
+<div [formGroup]="formGroup">
+  <div class="row" >
+    <div class="col-lg-12 col-lg-offset-1">
+      <div class="col-lg-12">
+
+            <div class="ibox float-e-margins">
+
+                <h5>
+                  Add Class
+                </h5>
+                <div ibox-tools></div>
+
+              <div class="ibox-content">
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Class Name:</label>
+                  <div class="col-md-9">
+                    <input type="text"  class="form-control" formControlName="name">
+                  </div>
+                </div>
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Sec Name:</label>
+                  <div class="col-md-9">
+                    <input type="text"  class="form-control" formControlName="sectionName">
+                  </div>
+                </div>
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Code:</label>
+                  <div class="col-md-9">
+                    <input type="text"  class="form-control" formControlName="code">
+                  </div>
+                </div>
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Grading :</label>
+                  <div class="col-md-9">
+                    <select class="selectpicker form-control" formControlName="grading">
+                      <option>Select</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label"> Elective :</label>
+                  <div class="col-md-9">
+                    <input type="checkbox" class="form-control" formControlName="elective">
+                  </div>
+                </div>
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Batch :</label>
+                  <div class="col-md-9">
+                    <input type="text" class="form-control" formControlName="batch">
+                  </div>
+                </div>
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Name:</label>
+                  <div class="col-md-9">
+                    <input type="text" class="form-control" formControlName="newName">
+                  </div>
+                </div>
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">Start Date:</label>
+                  <div class="col-md-9">
+                    <input type="date" class="form-control" formControlName="startDate">
+                  </div>
+                </div>
+                <div class="form-group m-b-xs">
+                  <label class="col-md-3 control-label">End Date:</label>
+                  <div class="col-md-9">
+                    <input type="date" class="form-control" formControlName="endDate">
+                  </div>
+                </div>
+                <div class="form-action">
+                  <div class="col-md-12">
+                    <button type="submit" name="addDetails"
+                            class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save" >
+                      <strong>ADD</strong></button>
+
+                    <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                            (click)="cancel(); $event.stopPropagation()">
+                      <strong>Cancel</strong></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+

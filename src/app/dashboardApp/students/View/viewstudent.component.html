@@ -1,0 +1,406 @@
+<div class="wrapper wrapper-content animated fadeIn marginclass">
+  <div class="row" >
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="col-lg-12">
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#admission">Student Admission</a></li>
+          <li><a data-toggle="tab" href="#personal">Personal Details</a></li>
+          <li><a data-toggle="tab" href="#contacts">Contact Details</a></li>
+          <li><a data-toggle="tab" href="#class">Class & Batch</a></li>
+          <li><a data-toggle="tab" href="#photo">Upload Photo</a></li>
+          <li><a data-toggle="tab" href="#settings">Settings</a></li>
+          <li><a data-toggle="tab" href="#gaurdian">Parent & Gaurdian </a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="admission" class="tab-pane fade in active">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content">
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Admission Number:</label>
+                      <div class="col-md-9">
+                        <p>{{student.admissionNumber}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Admission Date:</label>
+                      <div class="col-md-9">
+                        <p>{{student.admissionDate}}</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div id="personal" class="tab-pane ">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content">
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">First Name:</label>
+                      <div class="col-md-9">
+                        <p>{{student.firstName}}</p>
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Middle Name:</label>
+                      <div class="col-md-9">
+                        <p>{{student.middleName}}</p>
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Last Name:</label>
+                      <div class="col-md-9">
+                        <p>{{student.lastName}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Date Of Birth:</label>
+                      <div class="col-md-9">
+                        <p>{{student.dob}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Blood Group:</label>
+                      <div class="col-md-9">
+                        <p>{{student.blood}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Birth Place:</label>
+                      <div class="col-md-9">
+                        <p>{{student.birthPlace}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Nationality:</label>
+                      <div class="col-md-9">
+                        <p>{{student.nationality}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Mobile:</label>
+                      <div class="col-md-9">
+                        <p>{{student.mobile}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Mother Tongue:</label>
+                      <div class="col-md-9">
+                        <p>{{student.motherTongue}}</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div id="contacts" class="tab-pane ">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+
+                  <div class="ibox-content">
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Address Line1:</label>
+                      <div class="col-md-9">
+                        <p>{{student.addLine1}}</p>
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Address Line2:</label>
+                      <div class="col-md-9">
+                        <p>{{student.addLine2}}</p>
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">City:</label>
+                      <div class="col-md-9">
+                        <p>{{student.city}}</p>
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">State:</label>
+                      <div class="col-md-9">
+                        <p>{{student.state}}</p>
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Country:</label>
+                      <div class="col-md-9">
+                        <p>{{student.country}}</p>
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Pincode:</label>
+                      <div class="col-md-9">
+                        <p>{{student.pincode}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label"> Phone:</label>
+                      <div class="col-md-9">
+                        <p>{{student.phone}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Mobile:</label>
+                      <div class="col-md-9">
+                        <p>{{student.mobile1}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Email:</label>
+                      <div class="col-md-9">
+                        <p>{{student.email}}</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div id="class" class="tab-pane ">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content">
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Class:</label>
+                      <div class="col-md-9">
+                        <p>{{student.classSelect}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Batch:</label>
+                      <div class="col-md-9">
+                        <p>{{student.batch}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Roll No:</label>
+                      <div class="col-md-9">
+                        <p>{{student.rollNo}}</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div id="photo" class="tab-pane ">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content">
+                    <div class="form-group">
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Upload User's photo:</label>
+                        <div class="col-md-9">
+                          <p>{{student.upload}}</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div id="settings" class="tab-pane ">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content">
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Biometric ID:</label>
+                      <div class="col-md-9">
+                        <p>{{student.biometric}}</p>
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Enable SMS Features:</label>
+                      <div class="col-md-9">
+                        <p>{{student.sms}}</p>
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Enable Email Features:</label>
+                      <div class="col-md-9">
+                        <p>{{student.emailFeature}}</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div id="gaurdian" class="tab-pane ">
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+                <div class="ibox float-e-margins">
+                  <div class="ibox-title ">
+                    <h5>
+                      Personal Details
+                    </h5>
+                    <div ibox-tools></div>
+                  </div>
+                  <div class="ibox-content">
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">First Name:</label>
+                      <div class="col-md-9">
+                        <p>{{student.parentFirstName}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Last Name:</label>
+                      <div class="col-md-9">
+                        <p>{{student.parentLastName}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Relation:</label>
+                      <div class="col-md-9">
+                        <p>{{student.relation}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Date Of Birth:</label>
+                      <div class="col-md-9">
+                        <p>{{student.parentdob}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Education:</label>
+                      <div class="col-md-9">
+                        <p>{{student.education}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Nationality:</label>
+                      <div class="col-md-9">
+                        <p>{{student.occupation}}</p>
+                      </div>
+                    </div>
+                    <div class="form-group m-b-xs">
+                      <label class="col-md-3 control-label">Income:</label>
+                      <div class="col-md-9">
+                        <p>{{student.income}}</p>
+                      </div>
+                    </div>
+
+                    <div class="ibox-title ">
+                      <h5>
+                        Contact Details
+                      </h5>
+                      <div ibox-tools></div>
+                    </div>
+                    <div class="ibox-content">
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Email:</label>
+                        <div class="col-md-9">
+                          <p>{{student.parentEmail}}</p>
+                        </div>
+                      </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Address Line1:</label>
+                        <div class="col-md-9">
+                          <p>{{student.parentAddLine1}}</p>
+                        </div>
+                      </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Address Line2:</label>
+                        <div class="col-md-9">
+                          <p>{{student.parentAddLine2}}</p>
+                        </div>
+                      </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">City:</label>
+                        <div class="col-md-9">
+                          <p>{{student.parentCity}}</p>
+                        </div>
+                      </div>
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">State:</label>
+                        <div class="col-md-9">
+                          <p>{{student.parentState}}</p>
+                        </div>
+                      </div>
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Country:</label>
+                        <div class="col-md-9">
+                          <p>{{student.parentCountry}}</p>
+                        </div>
+                      </div>
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Pincode:</label>
+                        <div class="col-md-9">
+                          <p>{{student.parentPincode}}</p>
+                        </div>
+                      </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label"> Phone 1:</label>
+                        <div class="col-md-9">
+                          <p>{{student.parentPhone1}}</p>
+                        </div>
+                      </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label"> Phone 2:</label>
+                        <div class="col-md-9">
+                          <p>{{student.parentPhone2}}</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,168 @@
+<div id="batchpay" class="tab-pane fade in active">
+
+  <div class="row">
+    <form class="form-horizontal" #admission="ngForm">
+
+      <div class="col-lg-6 ">
+        <div class="ibox-title ">
+          <h5>
+            Pay Hostel Fees
+          </h5>
+          <div ibox-tools></div>
+        </div>
+        <div class="ibox-content">
+          <div class="row">
+            <div class="col-lg-12">
+
+              <div class="form-group m-b-xs">
+                <label class="col-md-3 control-label">Select batch:</label>
+                <div class="col-md-9">
+                  <select class="selectpicker form-control" name="selectBatch" [(ngModel)]="batchpay.selectBatch">
+                    <option>Select</option>
+                    <option>G1-G2</option>
+                    <option>H1-H2</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group m-b-xs">
+                <label class="col-md-3 control-label">Fee Collection:</label>
+                <div class="col-md-9">
+                  <select class="selectpicker form-control" name="fee" [(ngModel)]="batchpay.fee">
+                    <option>Select</option>
+                    <option>G1-G2</option>
+                    <option>H1-H2</option>
+                  </select>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 ">
+        <div class="ibox-content">
+          <div class="row">
+            <div class="col-lg-12">
+
+              <div class="form-group">
+                <div class="col-lg-4">
+                  <label>Student</label>
+                </div>
+
+                <div class="common_select_box">
+                  <div class="input-group-btn dropdown {{dropdown1? 'open':''}}"
+                       (click)="dropdown1=!dropdown1">
+                    <div class="col-md-7">
+                      <button type="button" class="selectpicker form-control" dropdown-toggle=""
+                              aria-haspopup="true" aria-expanded="false">{{selectedFee.name}}
+                      </button>
+                    </div>
+
+                    <ul class="dropdown-menu">
+                      <li (click)="onSelect(fee)" *ngFor='let fee of fees'>
+                        {{fee?.name}}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div *ngIf="selectedFee">
+
+                  <div class="form-group m-b-xs">
+                    <label class="col-md-3 control-label">Student Admission Number:</label>
+                    <div class="col-md-9">
+                    {{selectedFee.id}}
+                      </div>
+                  </div>
+
+                  <div class="form-group m-b-xs">
+                    <label class="col-md-3 control-label">Student Roll Number:</label>
+                    <div class="col-md-9">
+                      {{selectedFee.roll}}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-9 col-lg-offset-1 ">
+
+                  <div class="ibox-content">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <table class="table">
+                          <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Amount($)</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                            <td>{{selectedFee.name}}</td>
+                            <td>{{selectedFee.amount}}</td>
+                          </tr>
+                          </tbody>
+                        </table>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div></div>
+
+                <div class="col-lg-12 col-lg-offset-1 ">
+                  <div class="ibox float-e-margins">
+                      <div class="form-group m-b-xs">
+                        <div class="col-md-3 control-label">
+                          <strong>Payment Mode</strong>
+                        </div>
+                        <div class="col-md-9">
+                          <select class="selectpicker form-control" name="selectPayment" [(ngModel)]="batchpay.selectPayment">
+                            <option>Select</option>
+                            <option>cash</option>
+                            <option>cheque</option>
+                            <option>DD</option>
+                            <option>onlinePayment</option>
+                            <option>others</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Reference Number:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" name="number" [(ngModel)]="batchpay.number">
+                        </div>
+                      </div>
+                      <div class="form-group m-b-xs">
+                        <label class="col-md-3 control-label">Payment Notes:</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" name="notes" [(ngModel)]="batchpay.notes">
+                        </div>
+                      </div>
+
+                      <div class="form-action">
+                        <div class="col-md-12">
+                          <button type="submit"
+                                  class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save"
+                                  (click)="saveBatchpay();  $event.stopPropagation()">
+                            <strong>PayFee</strong></button>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+
+    </form>
+  </div>
+
+</div>
+
+

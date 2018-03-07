@@ -1,0 +1,64 @@
+<div class="wrapper wrapper-content animated fadeIn marginclass">
+  <div class="row" >
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="col-lg-12">
+
+            <form class="form-horizontal" #admission="ngForm">
+              <fieldset>
+      <div class="ibox float-e-margins">
+
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Class:</label>
+            <div class="col-md-9">
+              <input type="text" name="libclass" class="form-control" [(ngModel)]="librarysetting.libclass">
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Category:</label>
+            <div class="col-md-9">
+              <select class="selectpicker form-control" name="category" [(ngModel)]="librarysetting.category">
+                <option>Select</option>
+                <option>BC</option>
+                <option>Test</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Books Issuable:</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" name="issue" [(ngModel)]="librarysetting.issue">
+            </div>
+          </div>
+
+          <div class="form-group m-b-xs">
+            <label class="col-md-3 control-label">Time Period:</label>
+            <div class="col-md-9">
+              <input type="text" name="time" class="form-control"[(ngModel)]="librarysetting.time">
+            </div>
+          </div>
+
+          <div class="form-action">
+            <div class="col-md-12">
+            <button type="submit"  [disabled]="!admission.form.valid"
+                    class="btn btn-md btn-primary pull-right m-t-xs m-l btn-save"
+                  (click)="saveLibrarysetting();  $event.stopPropagation()">
+              <strong>Save</strong></button>
+
+              <button class="btn btn-md btn-white pull-right m-t-xs" type="button"
+                    (click)="cancel(); $event.stopPropagation()">
+              <strong>Cancel</strong></button>
+          </div>
+        </div>
+          </div>
+
+              </fieldset>
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+
+

@@ -1,0 +1,35 @@
+<div class="col-md-12 ">
+  <h2>Vehicle Details</h2>
+  <div class="col-md-12 margin-bottom">
+    <button routerLink="/addvehicle" class="btn btn-primary pull-right">Add Vehicles</button>
+  </div>
+
+
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Vehicle Number</th>
+          <th>Seat</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+          <td><a [routerLink] = "['/viewvehicle',{id: vehicle.id} ]">{{vehicle.number}}</a></td>
+          <td>{{vehicle.seat}}</td>
+
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit editBtn" [routerLink]="['/editvehicle',{id: vehicle.id}]" ></button>
+              <button type="button" class="btn btn-default fa fa-trash-o editBtn" [routerLink]="['/deletevehicle', {id: vehicle.id}]"></button>
+
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
