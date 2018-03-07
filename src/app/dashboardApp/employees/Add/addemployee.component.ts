@@ -6,9 +6,9 @@ import { Employee } from '../employee';
 @Component({
   selector: 'addemployee',
   templateUrl:  './addemployee.component.html'
-
+////shhhhh
 })
-export class AddEmployeeComponent {
+export class AddUserComponent {
   //title = 'app works!';
   employee:Employee = new Employee();
   constructor(private shared:SharedService){
