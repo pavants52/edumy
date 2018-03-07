@@ -14,45 +14,30 @@ import { MessageEvent } from '../../utilityApp/services/message_event';
   templateUrl: './login.component.html'
 })
 
-export class LoginComponent {
+<div class="navbar-wrapper" style="margin-top: 0; position: static">
+    <nav class="navbar navbar-default " role="navigation" style="position: static; padding-bottom: 5px;">
+      <div class="container">
+        <div id="navbar" class="goal-animation navbar-collapse collapse in" aria-hidden="false">
+          <div class="navbar-header page-scroll">
+            <button aria-controls="navbar" type="button" data-target="#navbar" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a routerLink="/index"><img class="logo_img" src="assets/img/landing/school.png" alt="laptop"></a>
+          </div>
 
-  login: Login = new Login();
-  subDomainName: string = "";
-  logindata: any[];
-  mobNumber: string = "";
-  length: number;
-  passwd: string = "";
-  flag: number = 0;
-
-  //flgdata: string = "src/assets/img/flags/16/India.png";
-
-  constructor(private loginService: LoginService, private router: Router,
-    private localstorageService: LocalstorageService,
-    private notificationService: NotificationService,
-    private sharedService: SharedService,
-    private broadcaster:Broadcaster,
-  private message_event:MessageEvent
-  ) {
-    debugger
-    localstorageService.removeIteamData('userData');
-
-    try {
-      this.login.userid = JSON.parse(this.sharedService.getDataByKey("mobileNumber"));
-      this.login.password = JSON.parse(this.sharedService.getDataByKey("password"));
-      this.subDomainName = JSON.parse(this.sharedService.getDataByKey("domainName"));
-    }
-    catch (e) {
-      this.login.userid = "";
-      this.login.password = "";
-      this.subDomainName = "";
-    }
-
-    // this.login.userid = JSON.parse(this.sharedService.getDataByKey("mobileNumber"));
-    // this.login.password = JSON.parse(this.sharedService.getDataByKey("password"));
-    // this.subDomainName = JSON.parse(this.sharedService.getDataByKey("domainName"));
-
-  }
-
+        <!--  <ul class="nav navbar-nav navbar-right">
+            <li><a class="page-scroll lan_login haderStyle" routerLink="/signup">Signup</a></li>
+            <li>
+              <button type="submit" class="btn btn-primary block full-width m-b getstarted_button" routerLink="/signup">GET STARTED</button>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+  </div>
 
   userLogin(loginModel: Login) {
 
